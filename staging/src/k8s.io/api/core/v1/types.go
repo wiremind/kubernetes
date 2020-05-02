@@ -2245,7 +2245,8 @@ type Container struct {
 	// More info: https://kubernetes.io/docs/concepts/containers/images#updating-images
 	// +optional
 	ImagePullPolicy PullPolicy `json:"imagePullPolicy,omitempty" protobuf:"bytes,14,opt,name=imagePullPolicy,casttype=PullPolicy"`
-	// Security options the container should run with.
+	// SecurityContext defines the security options the container should be run with.
+	// If set, the fields of SecurityContext override the equivalent fields of PodSecurityContext.
 	// More info: https://kubernetes.io/docs/concepts/policy/security-context/
 	// More info: https://kubernetes.io/docs/tasks/configure-pod-container/security-context/
 	// +optional
